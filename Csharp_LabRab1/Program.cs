@@ -1,25 +1,25 @@
 ﻿using System;
+//оставляем в директивах только одну подключенную библиотеку System - остальные не нужны
 
-namespace Csharp_LabRab1
+namespace Csharp_LabRab1    //указываем неймспейс как имя нашей программы
 {
-    class Program
+    class Program           //стандартный класс програм
     {
-        static void Main(string[] args)
+        static void Main(string[] args) //в нем основной метод программы - Main(string[] args). args - массив операторов, записанных в виде объектов String
         {
-            try
+            try                                     //приучаемся писать правильно, обрабатывая эксцепты - пишем основной код программы в теле секции try
             {
-                Console.WriteLine("Hello World!");
+                Console.WriteLine("Hello World!");  //в этой секции выводим Hello World
             }
-
-            catch (Exception e)
+            catch (Exception e)                     //в этой секции перехватываем ошибку и выводим ее на экран
             {
                 Console.WriteLine(e.ToString());
             }
 
-            finally
+            finally                                 //и в блоке Finally производим те действия, которые будем выполнять вне зависимости от того, выполнится ли try или catch
             {
-                Console.Write("Press <Enter>");
-                Console.ReadLine();
+                Console.Write("Press <Enter>");     //а именно - не дадим закрыться консоли, пока не нажмем Enter :)
+                Console.ReadLine();                 //вот теперь можно закрыть консоль
             }
         }
     }
