@@ -9,7 +9,16 @@ namespace Csharp_LabRab1    //указываем неймспейс как им�
         {
             try                                     //приучаемся писать правильно, обрабатывая эксепты - пишем основной код программы в теле секции try
             {
-                Console.WriteLine("Hello World!");  //в этой секции выводим Hello World
+                if (args.Length == 0)
+                {
+                    Console.WriteLine("Please enter a numeric argument.");
+                    Console.WriteLine("Usage: Factorial <num>");
+                }
+                else {
+                    for (int i = 0; i < args.Length; i++) {
+                        Console.WriteLine(args[i]);
+                    }
+                }
             }
             catch (Exception e)                     //в этой секции перехватываем ошибку и выводим ее на экран
             {
